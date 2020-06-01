@@ -97,42 +97,63 @@ textarea {
 
 
 html {
-  background-color: #454848;
+  background-color: #222;
   height: 100%;
+  width: 90%;
 }
-
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
-  font-size: 1.25em;
-  height: 100%;
+    color: #EFEFEF;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0 2em;
+    font-size: 1.25em;
+    display: flex;
+    justify-content: center;
 }
 
-.wrapper {
-  /*add display:flex and set justify-content to space-between*/
-  font-weight: 400;
-  display: flex;
-  justify-content: space-between;
+.flex-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+}
+p span{
+    font-family: "Lora";
+}
+header, footer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+h1{
+    font-family: "Lora";
+    font-size: 3em;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px solid #EFEFEF;
+    line-height: 1.5em;
+    margin-top, margin-bottom: 20px;
 }
 
-.div-1, .div-2, .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: #EFEFEF;
-  line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: #454848;
-  height: 300px;
-  display: flex;
-  width: 30%;
-  justify-content: center;
-  align-items: center;
-  padding: 2em;
-}
-.div-2{
-    border-left: solid 2px #727A7A;
-    border-right: solid 2px #727A7A;
+.flex-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5em;
+    font-size: 1em;
+    padding: 10px;
+    flex: 1 1 30%;
 }
 
+footer{
+    border-top: 1px solid #EFEFEF;
+    margin-top: 20px;
+}
+footer p{
+    padding: 30px 0;
+}
 
 
 
@@ -157,7 +178,7 @@ body {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
-    margin: -1px;
+    margin: -1px;/
     overflow: hidden;
     padding: 0;
     position: absolute;
@@ -216,6 +237,18 @@ body {
    Modify as content requires.
    ========================================================================== */
 
+   @media (min-width: 1200px) {
+    .flex-items {
+      flex-basis: 30%;
+      border-bottom: none;
+    }
+
+    #div-2 p {
+      border-left: 1px solid #555;
+      border-right: 1px solid #555;
+      padding: 0 40px;
+    }
+}
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),
